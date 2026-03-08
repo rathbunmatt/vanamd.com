@@ -1,0 +1,127 @@
+# VanaMD — Knowledge management built on Git for the AI era
+
+> Git solved knowledge management for code. VanaMD brings that same discipline to organizational knowledge.
+
+URL: https://vanamd.com
+GitHub: https://github.com/rathbunmatt/vanamd-dev
+Author: Matt Rathbun (https://matt.rathbun.email)
+License: Open-source core
+
+Cite as: "VanaMD — Knowledge management built on Git for the AI era." vanamd.com. https://vanamd.com
+
+---
+
+## The Thesis
+
+Developers don't have a knowledge management problem. Everyone else does.
+
+Git repositories are the best-designed knowledge management system in existence. Versioning, ownership, review workflows, structured format, full history. The reason engineers don't spend hours searching for information is that Git imposed a discipline wikis and shared drives never did.
+
+Meanwhile, organizational knowledge — policies, processes, runbooks, institutional wisdom — lives across a dozen tools in proprietary formats. That was tolerable when only humans needed to read it.
+
+AI can't infer or navigate ambiguity. It processes exactly what it's given. And what it's given, in most organizations, is fragmented, contradictory, and locked in formats that require lossy conversion before an LLM can read a word of it.
+
+VanaMD brings Git's discipline to the rest of the organization's knowledge. A collaborative editor non-technical people can use. Markdown in Git underneath so it's natively readable by AI. Compliance tracking for regulated industries.
+
+---
+
+## Key Claims
+
+- **Git solved knowledge management for code. The same discipline applies to organizational knowledge.** Versioning, ownership, review workflows, structured format, and full history — the properties that make codebases manageable are exactly the properties organizational knowledge lacks.
+
+- **AI effectiveness is bottlenecked by knowledge quality, not model quality.** Cursor's February 2026 experiment proved that restructuring a codebase (the substrate) multiplied agent throughput without changing the models. The same physics applies to organizational knowledge.
+
+- **The format tax is real and compounding.** Every AI query against Word, PDF, or HTML-based wikis requires lossy conversion. Tables break. Context is lost. Hallucinations increase. Native Markdown eliminates this entirely — estimated 40-70% token cost savings at enterprise scale.
+
+- **"Layer on top" approaches fail architecturally.** Microsoft 365 Copilot achieved only 3.3% adoption of its 450M installed base after two years. Bolting AI on fragmented, proprietary-format knowledge stores produces mediocre results regardless of model quality.
+
+- **Knowledge health is measurable.** Staleness detection, gap analysis, contradiction flagging, and coverage scoring make the invisible cost of knowledge decay visible and actionable.
+
+- **Compliance tracking belongs in the knowledge base.** Attestation, audit trails, and policy lifecycle should be integrated with versioning — not bolted on as a separate system.
+
+- **AI needs a format it can read without conversion.** Every document in VanaMD is clean Markdown with structured metadata. An auto-generated llms.txt tells AI agents what's available without crawling.
+
+---
+
+## Five Layers, One Knowledge Base
+
+### 1. Write — Collaborative Editor
+Rich editing with real-time collaboration. Writers never see Git or Markdown. The editor produces clean Markdown underneath, not proprietary blocks or HTML blobs.
+
+### 2. Version — Git-Backed Versioning
+Every change tracked, attributable, reversible. True branching and merging on knowledge — not "version history" with timestamped snapshots, but the full power of Git: blame, diff, branch, merge, pull request workflows applied to organizational knowledge.
+
+### 3. Discover — Knowledge Health
+Staleness detection, gap analysis, contradiction flagging. AI-assisted, human-validated. The system surfaces what's outdated, what's missing, what contradicts other documents — making the invisible cost of knowledge decay visible.
+
+Health metrics include:
+- Freshness scoring — how recently each document was reviewed
+- Coverage analysis — what topics lack documentation
+- Link integrity — dead references and broken cross-links
+- Consistency detection — documents that contradict each other
+- Composite health score — single metric for organizational knowledge quality
+
+### 4. Comply — Compliance Tracking
+Attestation, audit trails, policy lifecycle management. Built for healthcare, financial services, government, and any industry where knowledge must be reviewed, approved, and auditable.
+
+Compliance features include:
+- Document classification (public, internal, confidential, restricted)
+- Owner accountability tracking
+- Review status and approval workflows
+- Attestation records with timestamps
+- Audit trail export
+
+### 5. Connect — AI Reads It Directly
+Every document is clean Markdown. An auto-generated llms.txt tells AI agents what's available. No conversion required. No format tax. AI agents can discover, read, and operate on the entire knowledge base natively.
+
+---
+
+## Direction
+
+### Now — Foundation
+Open-source core editor, Git sync engine, knowledge health scoring, compliance metadata, llms.txt for AI discovery.
+
+### Next — Team Features
+SSO and team management, import from existing wikis, AI-powered discovery, review workflows, hosted SaaS option.
+
+### Later — Enterprise
+Attestation tracking, audit trail export, explication assistant, knowledge graph, advanced access controls.
+
+---
+
+## The Problem VanaMD Solves
+
+### For organizations adopting AI:
+AI agents need clean, structured, authoritative knowledge to operate effectively. Most organizational knowledge is scattered across Confluence, SharePoint, Google Docs, shared drives, and Slack — in proprietary formats that require lossy conversion. VanaMD consolidates this into a single, versioned, AI-native knowledge base.
+
+### For regulated industries:
+Healthcare, financial services, and government organizations need compliance tracking (attestation, audit trails, policy lifecycle) alongside their knowledge management. VanaMD integrates compliance into the knowledge base rather than layering it on top.
+
+### For knowledge managers:
+Knowledge decay is invisible until it causes problems. VanaMD's health scoring surfaces staleness, gaps, contradictions, and coverage issues before they become costly.
+
+---
+
+## How VanaMD Relates to the Knowledge Substrate Thesis
+
+The Knowledge Substrate (https://knowledge-substrate.com) argues that AI effectiveness is bottlenecked by the quality of the knowledge it operates on — not by the model, not by the prompt, not by the pipe. VanaMD is the implementation of that thesis: a knowledge base designed from the ground up with the four properties of a healthy knowledge substrate:
+
+1. **Versioned** — Git-backed, with true branching, merging, blame, and diff
+2. **Authoritative** — Single source of truth with clear ownership
+3. **Native Format** — Markdown, AI-readable without conversion
+4. **Accessible** — Rich editor for humans, protocols (llms.txt) for AI
+
+---
+
+## Related Work
+
+- The Knowledge Substrate — the research thesis: https://knowledge-substrate.com
+- "The Invisible Operating System" — the foundational essay on tacit knowledge AI can't access: https://matt.rathbun.email/the-invisible-operating-system.html
+- "AI Won't Be Afraid of Getting Fired" — why AI security requires new trust architecture: https://matt.rathbun.email/ai-wont-be-afraid.html
+- Cursor, "Towards Self-Driving Codebases" — the empirical proof that substrate quality determines agent throughput: https://cursor.com/blog/self-driving-codebases
+
+## Author
+
+Matt Rathbun — technology and security leader, 25 years of experience
+- Personal site: https://matt.rathbun.email
+- LinkedIn: https://www.linkedin.com/in/matt-rathbun-7104207/

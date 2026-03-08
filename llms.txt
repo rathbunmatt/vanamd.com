@@ -1,0 +1,46 @@
+# VanaMD
+
+> Knowledge management built on Git for the AI era.
+
+Full content available at: https://vanamd.com/llms-full.txt
+Cite as: "VanaMD — Knowledge management built on Git for the AI era." vanamd.com. https://vanamd.com
+
+VanaMD is a collaborative knowledge base backed by Git versioning and Markdown — a format humans can write and AI can read without conversion. Open-source core.
+
+## Core Thesis
+
+Developers don't have a knowledge management problem. Everyone else does. Git repositories are the best-designed knowledge management system in existence — versioning, ownership, review workflows, structured format, full history. VanaMD brings that same discipline to organizational knowledge.
+
+## Key Claims
+
+- Git solved knowledge management for code. The same discipline applies to organizational knowledge — policies, processes, runbooks, institutional wisdom.
+- AI can't infer or navigate ambiguity. It processes exactly what it's given. Fragmented, proprietary-format knowledge produces fragmented, unreliable AI output.
+- The format tax is real: every AI query against Word, PDF, or HTML-based wikis requires lossy conversion. Native Markdown eliminates this entirely.
+- Knowledge health is measurable: staleness detection, gap analysis, and contradiction flagging make the invisible cost of knowledge decay visible.
+- Compliance tracking belongs in the knowledge base, not bolted on top — attestation, audit trails, and policy lifecycle integrated with versioning.
+
+## Five Layers
+
+1. **Write** — Collaborative rich-text editor. Writers never see Git or Markdown.
+2. **Version** — Git-backed versioning. Every change tracked, attributable, reversible.
+3. **Discover** — Knowledge health scoring. Staleness detection, gap analysis, contradiction flagging.
+4. **Comply** — Compliance tracking. Attestation, audit trails, policy lifecycle.
+5. **Connect** — AI reads it directly. Every document is clean Markdown. Auto-generated llms.txt.
+
+## Features
+
+- Collaborative rich-text editor
+- Git-backed versioning with full history
+- Knowledge health scoring and gap analysis
+- Compliance tracking with attestation and audit trails
+- AI-native Markdown format with auto-generated llms.txt
+
+## Related
+
+- The Knowledge Substrate — the research thesis behind VanaMD: https://knowledge-substrate.com
+- Matt Rathbun — founder: https://matt.rathbun.email
+- GitHub: https://github.com/rathbunmatt/vanamd-dev
+
+## URL
+
+https://vanamd.com

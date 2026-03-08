@@ -9,6 +9,9 @@
     <meta name="author" content="Matt Rathbun" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta name="theme-color" content="#06090F" />
+    <meta name="citation_title" content="VanaMD — Knowledge management built on Git for the AI era" />
+    <meta name="citation_author" content="Matt Rathbun" />
+    <meta name="citation_public_url" content="https://vanamd.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -80,6 +83,51 @@
           "@type": "WebSite",
           "name": "VanaMD",
           "url": "https://vanamd.com"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is VanaMD?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "VanaMD is a collaborative knowledge base backed by Git versioning and Markdown — a format humans can write and AI can read without conversion. It brings Git's discipline (versioning, ownership, review workflows, full history) to organizational knowledge for non-technical users, with built-in compliance tracking for regulated industries."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why use Git for knowledge management?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Git repositories are the best-designed knowledge management system in existence. Engineers don't spend hours searching for information because Git imposed a discipline wikis and shared drives never did — versioning, ownership, review workflows, structured format, full history. VanaMD brings that same discipline to organizational knowledge while hiding Git's complexity behind a rich-text editor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does VanaMD work with AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every document in VanaMD is clean Markdown — a format AI can read without conversion. An auto-generated llms.txt file tells AI agents what's available. This eliminates the format tax: the lossy, expensive conversion required when AI queries Word documents, PDFs, or HTML-based wikis. Estimated 40-70% token cost savings at enterprise scale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is knowledge health scoring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "VanaMD measures knowledge health through staleness detection (how recently documents were reviewed), gap analysis (topics lacking documentation), contradiction flagging (documents that conflict), link integrity (broken references), and a composite health score. This makes the invisible cost of knowledge decay visible and actionable."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does VanaMD handle compliance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "VanaMD integrates compliance tracking directly into the knowledge base: document classification, owner accountability, review status and approval workflows, attestation records with timestamps, and audit trail export. Built for healthcare, financial services, government, and any industry where knowledge must be reviewed, approved, and auditable."
+              }
+            }
+          ]
         }
       ]
     }
@@ -88,6 +136,7 @@
     <style>
       body { margin: 0; padding: 0; background: #06090F; }
     </style>
+    <script type="module" crossorigin src="/assets/index-Dqus0Zie.js"></script>
   </head>
   <body>
     <!--
@@ -131,15 +180,15 @@
           <p>We're building VanaMD in the open. Get occasional updates on progress, architecture decisions, and what we're learning.</p>
           <nav>
             <a href="https://github.com/rathbunmatt/vanamd-dev">GitHub</a>
-            <a href="https://knowledge-substrate.com">Read the thesis</a>
+            <a href="https://knowledge-substrate.com">The Knowledge Substrate</a>
+            <a href="https://matt.rathbun.email/the-invisible-operating-system.html">The Invisible Operating System</a>
             <a href="mailto:matt.rathbun@gmail.com">Contact</a>
           </nav>
         </section>
       </article>
     </div>
-    <script type="module" src="/src/main.jsx"></script>
     <script>
-    (function(){var d={p:location.pathname,t:document.title,r:document.referrer,sw:screen.width,sh:screen.height,vw:innerWidth,vh:innerHeight,h:location.hostname};fetch('https://matt.rathbun.email/api/beacon',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).catch(function(){})})();
+    (function(){var k='_mr_vid',v=localStorage.getItem(k);if(!v){v=crypto.randomUUID();localStorage.setItem(k,v)}var d={p:location.pathname,t:document.title,r:document.referrer,sw:screen.width,sh:screen.height,vw:innerWidth,vh:innerHeight,h:location.hostname,vid:v};fetch('https://matt.rathbun.email/api/beacon',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).catch(function(){})})();
     </script>
   </body>
 </html>
