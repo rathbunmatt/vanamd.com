@@ -6,6 +6,9 @@
 
     <title>VanaMD — Knowledge management built on Git for the AI era</title>
     <meta name="description" content="Git solved knowledge management for code. VanaMD brings that same discipline to organizational knowledge — collaborative editing, Git versioning, and a format AI can read without conversion." />
+    <meta name="author" content="Matt Rathbun" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#06090F" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -13,11 +16,16 @@
     <meta property="og:title" content="VanaMD — Knowledge management built on Git for the AI era" />
     <meta property="og:description" content="Git solved knowledge management for code. VanaMD brings that same discipline to organizational knowledge — collaborative editing, Git versioning, and a format AI can read without conversion." />
     <meta property="og:site_name" content="VanaMD" />
+    <meta property="og:image" content="https://vanamd.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="VanaMD — Knowledge management built on Git for the AI era" />
     <meta name="twitter:description" content="Git solved knowledge management for code. VanaMD brings that same discipline to organizational knowledge." />
+    <meta name="twitter:image" content="https://vanamd.com/og-image.png" />
 
     <!-- Favicon (inline SVG) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234ECDC4'/><text x='50' y='72' font-size='60' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%2306090F'>V</text></svg>" />
@@ -25,12 +33,110 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://vanamd.com" />
 
+    <!-- Preconnect to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "VanaMD",
+          "url": "https://vanamd.com",
+          "description": "Knowledge management built on Git for the AI era. Collaborative editing, Git versioning, and a format AI can read without conversion.",
+          "founder": {
+            "@type": "Person",
+            "name": "Matt Rathbun"
+          },
+          "sameAs": [
+            "https://github.com/rathbunmatt/vanamd-dev"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "VanaMD",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "A collaborative knowledge base backed by Git versioning and Markdown — a format humans can write and AI can read without conversion.",
+          "url": "https://vanamd.com",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Open-source core"
+          },
+          "featureList": [
+            "Collaborative rich-text editor",
+            "Git-backed versioning with full history",
+            "Knowledge health scoring and gap analysis",
+            "Compliance tracking with attestation and audit trails",
+            "AI-native Markdown format with auto-generated llms.txt"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "VanaMD",
+          "url": "https://vanamd.com"
+        }
+      ]
+    }
+    </script>
+
     <style>
       body { margin: 0; padding: 0; background: #06090F; }
     </style>
   </head>
   <body>
-    <div id="root"></div>
+    <!--
+      SEO: Static content mirror for search engines.
+      The React app hydrates over this on load.
+    -->
+    <div id="root">
+      <article itemscope itemtype="https://schema.org/WebPage">
+        <header>
+          <h1 itemprop="name">VanaMD — Knowledge management built on Git for the AI era</h1>
+          <p itemprop="description">VanaMD is a collaborative knowledge base backed by Git versioning and Markdown — a format humans can write and AI can read without conversion.</p>
+        </header>
+        <section id="thesis">
+          <h2>The thesis: Developers don't have a knowledge management problem. Everyone else does.</h2>
+          <p>Git repositories are the best-designed knowledge management system in existence. Versioning, ownership, review workflows, structured format, full history. The reason engineers don't spend hours searching for information is that Git imposed a discipline wikis and shared drives never did.</p>
+          <p>Meanwhile, organizational knowledge — policies, processes, runbooks, institutional wisdom — lives across a dozen tools in proprietary formats. That was tolerable when only humans needed to read it.</p>
+          <p>AI can't infer or navigate ambiguity. It processes exactly what it's given. And what it's given, in most organizations, is fragmented, contradictory, and locked in formats that require lossy conversion before an LLM can read a word of it.</p>
+          <p>VanaMD brings Git's discipline to the rest of the organization's knowledge. A collaborative editor non-technical people can use. Markdown in Git underneath so it's natively readable by AI. Compliance tracking for regulated industries.</p>
+        </section>
+        <section>
+          <h2>What we're building: Five layers. One knowledge base.</h2>
+          <ul>
+            <li><strong>Write</strong> — Collaborative editor. Rich editing with real-time collaboration. Writers never see Git or Markdown.</li>
+            <li><strong>Version</strong> — Git-backed versioning. Every change tracked, attributable, reversible. True branching and merging on knowledge.</li>
+            <li><strong>Discover</strong> — Knowledge health. Staleness detection, gap analysis, contradiction flagging. AI-assisted, human-validated.</li>
+            <li><strong>Comply</strong> — Compliance tracking. Attestation, audit trails, policy lifecycle. For healthcare, financial services, government.</li>
+            <li><strong>Connect</strong> — AI reads it directly. Every document is clean Markdown. An auto-generated llms.txt tells agents what's available.</li>
+          </ul>
+        </section>
+        <section id="direction">
+          <h2>Direction: Where this is headed</h2>
+          <h3>Now — Foundation</h3>
+          <p>Open-source core editor, Git sync engine, knowledge health scoring, compliance metadata, llms.txt for AI discovery.</p>
+          <h3>Next — Team features</h3>
+          <p>SSO and team management, import from existing wikis, AI-powered discovery, review workflows, hosted SaaS option.</p>
+          <h3>Later — Enterprise</h3>
+          <p>Attestation tracking, audit trail export, explication assistant, knowledge graph, advanced access controls.</p>
+        </section>
+        <section id="follow">
+          <h2>Follow the build</h2>
+          <p>We're building VanaMD in the open. Get occasional updates on progress, architecture decisions, and what we're learning.</p>
+          <nav>
+            <a href="https://github.com/rathbunmatt/vanamd-dev">GitHub</a>
+            <a href="https://knowledge-substrate.com">Read the thesis</a>
+            <a href="mailto:matt.rathbun@gmail.com">Contact</a>
+          </nav>
+        </section>
+      </article>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
     (function(){var d={p:location.pathname,t:document.title,r:document.referrer,sw:screen.width,sh:screen.height,vw:innerWidth,vh:innerHeight,h:location.hostname};fetch('https://matt.rathbun.email/api/beacon',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).catch(function(){})})();
