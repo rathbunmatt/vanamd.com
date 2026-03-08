@@ -159,30 +159,45 @@ ZONE_ID=$(aws route53 list-hosted-zones-by-name \
 log "Hosted Zone: $ZONE_ID"
 
 if [ "$CERT_STATUS" != "ISSUED" ]; then
-  # Get validation record details
-  VALIDATION=$(aws acm describe-certificate \
+  # Get all validation records (apex + www SAN)
+  VALIDATION_COUNT=$(aws acm describe-certificate \
     --certificate-arn "$CERT_ARN" \
     --region "$REGION" \
-    --query 'Certificate.DomainValidationOptions[0].ResourceRecord')
+    --query 'length(Certificate.DomainValidationOptions)' \
+    --output text)
 
-  VNAME=$(echo "$VALIDATION" | python3 -c "import sys,json; print(json.load(sys.stdin)['Name'])")
-  VVALUE=$(echo "$VALIDATION" | python3 -c "import sys,json; print(json.load(sys.stdin)['Value'])")
+  CHANGES="[]"
+  for i in $(seq 0 $((VALIDATION_COUNT - 1))); do
+    VALIDATION=$(aws acm describe-certificate \
+      --certificate-arn "$CERT_ARN" \
+      --region "$REGION" \
+      --query "Certificate.DomainValidationOptions[$i].ResourceRecord")
 
-  # Add CNAME validation record
+    VNAME=$(echo "$VALIDATION" | python3 -c "import sys,json; print(json.load(sys.stdin)['Name'])")
+    VVALUE=$(echo "$VALIDATION" | python3 -c "import sys,json; print(json.load(sys.stdin)['Value'])")
+
+    CHANGES=$(echo "$CHANGES" | python3 -c "
+import sys, json
+changes = json.load(sys.stdin)
+changes.append({
+  'Action': 'UPSERT',
+  'ResourceRecordSet': {
+    'Name': '$VNAME',
+    'Type': 'CNAME',
+    'TTL': 300,
+    'ResourceRecords': [{'Value': '$VVALUE'}]
+  }
+})
+print(json.dumps(changes))
+")
+    log "DNS validation record queued: $VNAME"
+  done
+
+  # Add all CNAME validation records in one batch
   aws route53 change-resource-record-sets \
     --hosted-zone-id "$ZONE_ID" \
-    --change-batch "{
-      \"Changes\": [{
-        \"Action\": \"UPSERT\",
-        \"ResourceRecordSet\": {
-          \"Name\": \"$VNAME\",
-          \"Type\": \"CNAME\",
-          \"TTL\": 300,
-          \"ResourceRecords\": [{\"Value\": \"$VVALUE\"}]
-        }
-      }]
-    }" > /dev/null
-  log "DNS validation record added: $VNAME"
+    --change-batch "{\"Changes\": $CHANGES}" > /dev/null
+  log "All DNS validation records added"
 
   # Wait for validation
   warn "Waiting for certificate validation (2-10 minutes)..."
