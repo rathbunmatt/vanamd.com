@@ -190,7 +190,7 @@ function Thesis() {
           color: C.text, lineHeight: 1.3, letterSpacing: "-0.02em",
           margin: "0 0 28px",
         }}>
-          Developers don't have a knowledge management problem. Everyone else does.
+          What if the rest of your organization's knowledge had the same discipline Git gives code?
         </h2>
       </Reveal>
 
